@@ -1,0 +1,293 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manufacturing+Consent&family=Parisienne&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+*
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+
+.site
+    {
+        display: flex;
+        flex-direction: column;
+        font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+    }
+
+.container
+    {
+        width: 1310px;
+        margin: 0 auto;
+        /*border: solid rgb(0, 0, 0) 1px;*/
+    }
+
+/* " CABEÇALHO "*/
+
+.cabecalho 
+    {
+        height: 122px;
+        background-color: transparent;
+        background-image: linear-gradient(180deg,#fff 0%, #dbdbdb 100%);
+    }
+
+.cabecalho  .container
+    {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+.cabecalho .logo img
+    {
+        width: 165px;
+    }
+
+.menu-cabecalho ul
+    {
+        list-style-type: none;
+        display: flex; 
+        flex-direction: row;
+        gap: 10px;
+    }
+.menu-cabecalho a
+    {
+        text-decoration: none;
+    }
+
+.menu-cabecalho i
+    {   
+        display: flex;
+
+        width: 30px;
+        height: 30px;
+        
+        justify-content: center;
+        align-items: center;
+        
+        border-radius: 50%;
+        padding: 5px;
+
+        color: #fff;
+        background-color: gray;   
+
+        transition: all 0.1 ease;
+    }
+
+.menu-cabecalho li:hover i 
+    {
+        background-color: transparent;
+        color: gray;
+
+    }
+/* " MENU PRINCIPAL "*/
+.menu
+    {
+        height: 55px;
+
+        background-color: transparent;
+        background-image: linear-gradient(180deg,#fff 0%,#ededed 100%);
+    }
+.menu .container
+    {
+        height: 100%;
+    }
+
+.menu ul
+    {
+        height: 100%;
+
+        display: flex;
+        list-style: none;
+
+        justify-content: space-around;
+        align-items: center;  
+    }
+
+.menu a 
+    {
+        text-decoration: none;
+        color: #003c6a;
+        padding: 18px;
+        font-weight: 500;
+    }
+.menu a:hover
+    {
+        background-color: #fff;
+    }
+
+/* BANNER */
+.banner
+    {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+    }
+
+/* NOTICÍAS E COMPÊTENCIAS */
+
+.noticias-competencia
+{
+
+    padding: 120px 0px;
+    background-image: linear-gradient(180deg,#00315e 0%, #000825 100%);
+
+}
+    .noticias-competencia .titulo
+    {
+        color: #fff;
+        font-size: 30px;
+        margin-bottom: 10px;
+
+    }
+/* NOTICIAS */
+.noticias
+{
+    display: flex;
+    gap : 25px;
+
+}
+    .noticias .noticia
+    {
+        flex: 1 1 25%; /* grown , shrink , basis */
+
+        /*
+            flex-basis: 25%;
+            flex-shrink: 0;
+            flex-grow: 0;
+        */
+
+        background-color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+
+
+        
+    }
+        .noticia .imagem
+        {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+
+        }   
+            .noticia .imagem img
+            {
+                width: 100%;
+                transition: all 0.5s ease;
+            }
+
+            .noticia .imagem:hover img
+            {
+                scale: 1.15;
+            }
+
+        .noticia .data
+        {
+            width: 100%;
+
+            background-color: #00315EBD;
+            color: #50c4ff;
+            padding: 8px 0;
+            font-style: italic;
+            text-align: center;
+
+            position: absolute ;
+            z-index: 1;
+
+            bottom: 0;
+            transition: all 0.5s ease;
+        }
+        .noticia .imagem:hover .data
+        {
+            bottom: -100%;
+        }
+
+            
+        .noticia .post
+        {
+            padding: 20px;
+        }
+            .noticia .post p
+            {
+                font-size: 17px;
+                font-weight: 200;
+                line-height: 22px;
+                color: #003c6a;
+            }
+        .noticia .botao
+        {
+            padding: 20px;
+
+            display: flex;
+            justify-content: end;
+
+
+        }
+
+        .noticia .botao a
+        {
+            padding: 5px;
+
+            background-color: #dbdbdb;
+            text-decoration: none;
+            font-style: italic;
+            color: #50c4ff;
+            border-radius: 20px;
+            
+        }
+        .noticia .botao a:hover
+        {
+            background-color: #50c4ff;
+            color: #dbdbdb;
+        }
+
+/* COMPENTENCIAS */
+.compentencias 
+{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+    .compentencias .compentencia
+    {
+        flex: 0 1 32%;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        border-radius: 10px;
+
+    }
+
+    .compentencias .compentencia img
+    {
+        width: 100%;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+        
+    }
+    .compentencias .compentencia:hover img
+            {
+                scale: 1.15;
+            }
+
+    .compentencia .texto-compentencia
+    {
+        padding: 10px;
+
+        position: absolute;
+
+        text-align: center;  
+        align-self: end;
+
+        color: #fff;
+        font-size: larger;
+     
+    }
